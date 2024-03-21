@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FuturePredictionsByMonths">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Expenses of the last 3 months"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lastMonth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
+
+    <TextView
+        android:id="@+id/lastMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Month:"
+        android:textSize="20sp"
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@id/total1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+    <EditText
+        android:id="@+id/total1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@id/twoMonthsAgo"
+        app:layout_constraintEnd_toStartOf="@+id/average1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastMonth" />
+
+    <EditText
+        android:id="@+id/average1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/twoMonthsAgo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total1"
+        app:layout_constraintTop_toBottomOf="@+id/lastMonth"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <TextView
+        android:id="@+id/twoMonthsAgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Two Months Ago:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/total2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total1"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/total2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/threeMonthsAgo"
+        app:layout_constraintEnd_toStartOf="@+id/average2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/twoMonthsAgo" />
+
+
+    <EditText
+        android:id="@+id/average2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/average3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/total2"
+        app:layout_constraintTop_toBottomOf="@id/average1" />
+
+    <TextView
+        android:id="@+id/threeMonthsAgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Three Months Ago:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/total3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total2"
+        app:layout_constraintVertical_bias="0.611" />
+
+
+    <EditText
+        android:id="@+id/total3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/future"
+        app:layout_constraintEnd_toStartOf="@id/average3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/threeMonthsAgo" />
+
+    <EditText
+        android:id="@+id/average3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toTopOf="@+id/future"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/total3"
+        app:layout_constraintTop_toBottomOf="@id/threeMonthsAgo"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <TextView
+        android:id="@+id/future"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Your Future Expense:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/futuretotalText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/total3" />
+
+    <TextView
+        android:id="@+id/futuretotalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/futuretotal"
+        app:layout_constraintEnd_toStartOf="@+id/futureaverageText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/future" />
+
+    <EditText
+        android:id="@+id/futuretotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/futureaverage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/futuretotalText" />
+
+    <TextView
+        android:id="@+id/futureaverageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Average:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/futureaverage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/futuretotalText"
+        app:layout_constraintTop_toBottomOf="@id/future" />
+
+    <EditText
+        android:id="@+id/futureaverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text=""
+        android:textColor="#757575"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/futuretotal"
+        app:layout_constraintTop_toBottomOf="@+id/futureaverageText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

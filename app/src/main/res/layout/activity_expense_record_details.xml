@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExpenseRecordDetails">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="161dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/ExpenseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/ExpenseName"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_format_size_24"
+        android:drawableLeft="@drawable/ic_baseline_format_size_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Expense Name"
+        android:inputType="textPersonName"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView" />
+
+    <EditText
+        android:id="@+id/Description"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_article_24"
+        android:drawableLeft="@drawable/ic_baseline_article_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Expense Description"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/Price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ExpenseName" />
+
+    <EditText
+        android:id="@+id/Price"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_money"
+        android:drawableLeft="@drawable/ic_baseline_money"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Price"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Description" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="212dp"
+        android:layout_height="51dp"
+        app:layout_constraintBottom_toTopOf="@id/button12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Price"
+        tools:layout_editor_absoluteY="400dp" />
+
+    <TextView
+        android:id="@+id/dateTextUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_baseline_calendar"
+        android:drawableLeft="@drawable/ic_baseline_calendar"
+        android:drawablePadding="10dp"
+        android:text="Date"
+        app:layout_constraintBottom_toTopOf="@+id/button11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button12"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="EnterDate"
+        android:text="Enter Date"
+        app:layout_constraintBottom_toTopOf="@id/button11"
+        app:layout_constraintEnd_toStartOf="@id/dateTextUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="166dp"
+        android:layout_height="65dp"
+        android:onClick="TakePhoto"
+        android:text="Add Photo"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintTop_toBottomOf="@id/button12"
+        app:layout_constraintEnd_toStartOf="@+id/pdfButton"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="565dp" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="166dp"
+        android:layout_height="65dp"
+        android:onClick="DeleteRecord"
+        android:text="Delete Expense Record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="166dp"
+        android:layout_height="65dp"
+        android:onClick="UpdateRecord"
+        android:text="Update Expense Record"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/button11" />
+
+    <Button
+        android:id="@+id/pdfButton"
+        android:layout_width="166dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:text="Export Pdf"
+        android:onClick="CreatePdfDocument"
+        app:layout_constraintBottom_toTopOf="@+id/button10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/button11"
+        app:layout_constraintTop_toBottomOf="@id/button12" />
+</androidx.constraintlayout.widget.ConstraintLayout>
